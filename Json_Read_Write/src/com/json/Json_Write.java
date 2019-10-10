@@ -1,23 +1,22 @@
 package com.json;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 public class Json_Write {
 
-		public static void main(String[] args) throws JSONException {
+		public static void main(String[] args)  {
 			
 		JSONObject obj = new JSONObject();
-		obj.put("name", "Rohan Sharma");
-		obj.put("Collage", "COEP");
+		obj.put("name", "Kalyani Jumade");
+		obj.put("Collage", "BCOE");
 		obj.put("Deparment", "B.E");
 		obj.put("Branch", "C.S");
-		obj.put("year", "2nd year");
+		obj.put("year", "2015");
 		
 	ArrayList<String> al=new ArrayList<>();
 	al.add("java");
@@ -25,7 +24,7 @@ public class Json_Write {
 	
 		JSONArray list = new JSONArray();
 	
-		list.put(al);
+		list.add(al);
 		
 		obj.put("Subjects", list);
 
